@@ -1,0 +1,14 @@
+spring:
+  flyway:
+    enabled: true
+    user: admin_ilyas
+    password: 12345
+  datasource:
+    url: jdbc:postgresql://localhost:5432/openschoolt1
+    username: admin_ilyas
+    password: 12345
+  application:
+    name: open_school_t1
+  jpa:
+    hibernate:
+      ddl-auto: update
