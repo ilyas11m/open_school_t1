@@ -1,12 +1,7 @@
-HELP.md
-.gitattributes
-.mvn/
-mvnw
-mvnw.cmd
-target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+### General ###
+*.log
+*.tmp
+.DS_Store
 
 ### STS ###
 .apt_generated
@@ -35,3 +30,17 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Maven ###
+.mvn/
+mvnw
+mvnw.cmd
+
+### Excluding target directories ###
+target/
+!**/src/main/**/target/
+!**/src/test/**/target/
+### Specific Maven wrapper ###
+!.mvn/wrapper/maven-wrapper.jar
+.gitattributes
+HELP.md
