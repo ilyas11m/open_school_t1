@@ -11,7 +11,7 @@ import java.util.List;
 @Service
 public class TaskServiceRealization implements TaskService {
 
-    TaskRepository taskRepository;
+    private final TaskRepository taskRepository;
 
     TaskServiceRealization(TaskRepository taskRepository) {
         this.taskRepository = taskRepository;
