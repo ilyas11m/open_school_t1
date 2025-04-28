@@ -18,7 +18,7 @@ import java.util.List;
 public class TaskController {
 
 
-    TaskService taskService;
+    private final TaskService taskService;
 
     TaskController(TaskService taskService) {
         this.taskService = taskService;

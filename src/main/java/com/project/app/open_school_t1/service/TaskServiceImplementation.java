@@ -9,11 +9,11 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class TaskServiceRealization implements TaskService {
+public class TaskServiceImplementation implements TaskService {
 
-    TaskRepository taskRepository;
+    private final TaskRepository taskRepository;
 
-    TaskServiceRealization(TaskRepository taskRepository) {
+    TaskServiceImplementation(TaskRepository taskRepository) {
         this.taskRepository = taskRepository;
     }
 
