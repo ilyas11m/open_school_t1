@@ -23,7 +23,7 @@ public class LogAspect {
         log.info("Method was executed: {}, returning: {}", joinPoint.getSignature().getName(), result);
     }
 
-    @AfterThrowing(pointcut = "execution(public * com.project.app.open_school_t1.service.TaskServiceRealization.*(..)))", throwing = "exception")
+    @AfterThrowing(pointcut = "execution(public * com.project.app.open_school_t1.service.TaskServiceImplementation.*(..)))", throwing = "exception")
     public void logException(JoinPoint joinPoint, Exception exception) {
         log.error("Exception raised: {} in method: {}", exception, joinPoint.getSignature().getName());
     }
