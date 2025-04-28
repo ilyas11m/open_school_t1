@@ -1,6 +1,6 @@
 package com.project.app.open_school_t1.repository;
 
-import com.project.app.open_school_t1.model.Task;
+import com.project.app.open_school_t1.entity.Task;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
