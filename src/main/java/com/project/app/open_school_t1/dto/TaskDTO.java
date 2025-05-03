@@ -17,23 +17,4 @@ public class TaskDTO {
     private String description;
     private Long userId;
 
-    public static TaskDTO toDTO(Task task) {
-        return TaskDTO.builder()
-                .id(task.getId())
-                .title(task.getTitle())
-                .description(task.getDescription())
-                .userId(task.getUserId())
-                .build();
-    }
-
-    public static Task toEntity(TaskDTO taskDto) {
-        Task task = new Task();
-
-        task.setTitle(taskDto.getTitle());
-        task.setDescription(taskDto.getDescription());
-        task.setUserId(taskDto.getUserId());
-
-        return task;
-    }
-
 }
