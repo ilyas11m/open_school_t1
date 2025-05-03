@@ -1,6 +1,6 @@
 package com.project.app.open_school_t1.service;
 
-import com.project.app.open_school_t1.util.TaskNotFoundException;
+import com.project.app.open_school_t1.exception.TaskNotFoundException;
 import com.project.app.open_school_t1.entity.Task;
 import com.project.app.open_school_t1.repository.TaskRepository;
 import com.project.app.open_school_t1.service.inf.TaskService;
