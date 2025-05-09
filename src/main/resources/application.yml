@@ -1,12 +1,12 @@
 spring:
   flyway:
     enabled: true
-    user: admin_ilyas
-    password: 12345
+    user: ${FLYWAY_USERNAME}
+    password: ${FLYWAY_PASSWORD}
   datasource:
-    url: jdbc:postgresql://localhost:5432/openschoolt1
-    username: admin_ilyas
-    password: 12345
+    url: ${DATABASE_URL}
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
   application:
     name: open_school_t1
   jpa:
