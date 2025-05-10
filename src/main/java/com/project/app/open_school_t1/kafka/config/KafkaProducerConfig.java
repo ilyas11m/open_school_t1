@@ -1,4 +1,4 @@
-package com.project.app.open_school_t1.kafka.producer;
+package com.project.app.open_school_t1.kafka.config;
 
 import com.project.app.open_school_t1.dto.TaskDTO;
 import org.apache.kafka.clients.producer.ProducerConfig;

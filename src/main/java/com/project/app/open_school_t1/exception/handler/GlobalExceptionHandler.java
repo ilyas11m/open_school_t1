@@ -15,7 +15,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(value = TaskNotFoundException.class)
     public ResponseEntity<Map<String, String>> taskNotFoundHandler(TaskNotFoundException exception) {
-        Map<String, String> response = Map.of("massage", exception.getMessage());
+        Map<String, String> response = Map.of("message", exception.getMessage());
         return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
     }
 }
