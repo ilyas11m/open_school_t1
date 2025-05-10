@@ -1,0 +1,2 @@
+ALTER TABLE tasks
+    ADD COLUMN task_status VARCHAR(11) NOT NULL DEFAULT 'TO_DO'
