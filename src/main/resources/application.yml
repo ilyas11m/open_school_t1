@@ -1,4 +1,20 @@
 spring:
+  mail:
+    host: smtp.mail.ru
+    port: 465
+    ssl:
+      enabled: true
+    username: ${USERNAME_MAIL}
+    password: ${PASSWORD_MAIL}
+  kafka:
+    session:
+      timeout:
+        ms: 15000
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: task-status
+    template:
+      default-topic: task-status-topic
   flyway:
     enabled: true
     user: ${FLYWAY_USERNAME}
