@@ -17,7 +17,9 @@ public class TaskServiceImplementation implements TaskService {
     private final KafkaTaskProducer kafkaTaskProducer;
     private final TaskMapper taskMapper;
 
-    TaskServiceImplementation(TaskRepository taskRepository, KafkaTaskProducer kafkaTaskProducer, TaskMapper taskMapper) {
+
+    TaskServiceImplementation(TaskRepository taskRepository, KafkaTaskProducer kafkaTaskProducer,
+                              TaskMapper taskMapper) {
         this.taskRepository = taskRepository;
         this.kafkaTaskProducer = kafkaTaskProducer;
         this.taskMapper = taskMapper;
