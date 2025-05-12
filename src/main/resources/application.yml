@@ -1,12 +1,28 @@
 spring:
+  mail:
+    host: smtp.mail.ru
+    port: 465
+    ssl:
+      enabled: true
+    username: ${USERNAME_MAIL}
+    password: ${PASSWORD_MAIL}
+  kafka:
+    session:
+      timeout:
+        ms: 15000
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: task-status
+    template:
+      default-topic: task-status-topic
   flyway:
     enabled: true
-    user: admin_ilyas
-    password: 12345
+    user: ${FLYWAY_USERNAME}
+    password: ${FLYWAY_PASSWORD}
   datasource:
-    url: jdbc:postgresql://localhost:5432/openschoolt1
-    username: admin_ilyas
-    password: 12345
+    url: ${DATABASE_URL}
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
   application:
     name: open_school_t1
   jpa:

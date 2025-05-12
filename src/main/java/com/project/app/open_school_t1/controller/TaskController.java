@@ -11,23 +11,23 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 
-import static com.project.app.open_school_t1.mapper.TaskMapper.toEntity;
-
 @RestController
 @RequestMapping("/tasks")
 public class TaskController {
 
 
     private final TaskService taskService;
+    private final TaskMapper taskMapper;
 
-    TaskController(TaskService taskService) {
+    TaskController(TaskService taskService, TaskMapper taskMapper) {
         this.taskService = taskService;
+        this.taskMapper = taskMapper;
     }
 
     @GetMapping("/{id}")
     @ResponseStatus(value = HttpStatus.OK)
     public TaskDTO getTaskById(@PathVariable Long id) {
-        return TaskMapper.toDTO(taskService.getById(id));
+        return taskMapper.toDTO(taskService.getById(id));
     }
 
     @GetMapping
@@ -35,20 +35,20 @@ public class TaskController {
     public List<TaskDTO> getAllTasks() {
         return taskService.getAllTasks()
                 .stream()
-                .map(TaskMapper::toDTO)
+                .map(taskMapper::toDTO)
                 .toList();
     }
 
     @PostMapping
     @ResponseStatus(value = HttpStatus.CREATED)
     public TaskDTO addTask(@RequestBody TaskDTO taskDto) {
-        return TaskMapper.toDTO(taskService.addTask(toEntity(taskDto)));
+        return taskMapper.toDTO(taskService.addTask(taskMapper.toEntity(taskDto)));
     }
 
     @PutMapping("/{id}")
     @ResponseStatus(value = HttpStatus.OK)
     public TaskDTO updateTask(@PathVariable Long id, @RequestBody Task newTask) {
-        return TaskMapper.toDTO(taskService.update(id, newTask));
+        return taskMapper.toDTO(taskService.update(id, newTask));
     }
 
     @DeleteMapping("/{id}")
